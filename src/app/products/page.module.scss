@@ -1,0 +1,26 @@
+.list {
+  padding: 16px;
+  display: flex;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.error {
+  color: red;
+  padding: 16px;
+  font-size: 2rem;
+}
+
+.product {
+  padding: 32px;
+  border: 1px solid #DEDEDE;
+
+  .image {
+    max-width: 300px;
+  }
+
+  .name {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+}

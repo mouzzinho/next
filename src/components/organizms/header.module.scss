@@ -1,0 +1,26 @@
+.header {
+  background-color: #F5F5F5;
+  padding: 20px 30px;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+
+  svg path {
+    fill: black;
+  }
+
+  .link {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: black;
+
+    &.active {
+      color: blue;
+
+      svg path {
+        fill: blue;
+      }
+    }
+  }
+}

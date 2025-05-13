@@ -1,0 +1,18 @@
+.navigation {
+  padding: 30px;
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+  }
+
+  a {
+    font-size: 16px;
+  }
+
+  .active a {
+    color: blue;
+  }
+}

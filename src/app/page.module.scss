@@ -1,0 +1,16 @@
+.main {
+  min-height: calc(100vh - 150px);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 1rem;
+  padding: 20px 30px;
+
+
+  a {
+    font-size: 2rem;
+  }
+}
