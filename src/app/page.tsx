@@ -5,8 +5,8 @@ import styles from './page.module.scss'
 
 import { getMenuLinks } from '@/utils/getMenuLinks'
 
-export default function Home() {
-    const availableLinks = getMenuLinks()
+export default async function Home() {
+    const availableLinks = await getMenuLinks()
 
     return (
         <section>

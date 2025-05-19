@@ -5,7 +5,7 @@ import { getUserTokenData } from '@/utils/getUserTokenData'
 const alterpressApi = createApi({
     reducerPath: 'alterpressApi',
     baseQuery: fetchBaseQuery({
-        baseUrl: 'https://api.alterpress.stage.alterpage.pl',
+        baseUrl: `${process.env.NEXT_PUBLIC_API_URL}`,
         credentials: 'include',
         prepareHeaders: (headers) => {
             const token = getUserTokenData()

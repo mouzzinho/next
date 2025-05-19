@@ -1,9 +1,10 @@
 export interface IProduct {
-  name: string;
-  productId: number;
-  pathname: string;
-  media: {
-    alt: string;
-    url: string;
-  }[]
+    name: string
+    productId: number
+    pathname: string
+    description: string
+    media: {
+        alt: string
+        url: string
+    }[]
 }

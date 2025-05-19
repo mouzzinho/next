@@ -5,34 +5,29 @@ import { useRouter } from 'next/navigation'
 
 import styles from './page.module.scss'
 
-import { getUserTokenData } from '@/utils/getUserTokenData'
-
 import Button from '@/components/atoms/button'
+import { getCookie } from '@/utils/getCookie'
 
 const Page = () => {
-    const router = useRouter()
     const [isLoading, setIsLoading] = useState(false)
-    const token = getUserTokenData()
+    const router = useRouter()
 
-    console.log(token)
-
-    const createToken = () => {
-        localStorage.setItem(
-            'tokenData',
-            JSON.stringify({
-                token: 'wxQBQaVWVw-vyopbFgVVQpEXp2K1sYxM',
-                expireAt: new Date().getTime() + 1000000,
-            })
-        )
+    const createToken = async () => {
         setIsLoading(true)
-        setTimeout(() => router.replace('/'), 1000)
+        document.cookie = `session_token=abc123; path=/; max-age=3600; secure`
+
+        if (typeof window !== 'undefined') {
+            setTimeout(() => window.location.replace('/'), 1000)
+        }
     }
 
     useEffect(() => {
-        if (token && !token.isTokenExpired) {
+        const cookie = getCookie('session_token')
+
+        if (cookie) {
             router.replace('/')
         }
-    }, [token, router])
+    }, [router])
 
     return (
         <section className={styles.container}>

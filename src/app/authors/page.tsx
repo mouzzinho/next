@@ -19,7 +19,7 @@ const Page = () => {
         <section>
             <BackLink url={'/'} />
             <div className={styles.list}>
-                {items.map((author) => (
+                {items.map((author, i) => (
                     <Link
                         key={`author-${author.authorId}`}
                         href={`/authors/${author.authorId}`}
@@ -29,6 +29,7 @@ const Page = () => {
                             className={styles.image}
                             src={author.media[0].url}
                             alt={author.media[0].url}
+                            priority={i < 4}
                             width={100}
                             height={150}
                         />

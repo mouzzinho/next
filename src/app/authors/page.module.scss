@@ -3,6 +3,7 @@
   display: flex;
   margin-top: 2rem;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .error {
@@ -23,4 +24,8 @@
     font-size: 2rem;
     margin-top: 1rem;
   }
+}
+
+.button {
+  margin: 16px;
 }

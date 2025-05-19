@@ -6,10 +6,9 @@ import PostCard from '@/components/molecules/post-card'
 import BackLink from '@/components/atoms/back-link'
 
 export default async function Page() {
-    const data = await fetch(
-        'https://api.alterpress.stage.alterpage.pl/posts',
-        { cache: 'no-store' }
-    )
+    const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts`, {
+        cache: 'no-store',
+    })
     const posts: { items: IPost[] } = await data.json()
 
     return (

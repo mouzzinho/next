@@ -16,6 +16,14 @@ export const MENU = [
         children: 'Layout vs Template',
     },
     {
+        pathname: '/revalidate',
+        children: 'Revalidate',
+    },
+    {
+        pathname: '/lazy',
+        children: 'Lazy',
+    },
+    {
         pathname: '/admin',
         children: 'Admin',
         adminOnly: true,

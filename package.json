@@ -3,10 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "cp .env.development .env.local && next dev",
+    "stage": "cp .env.staging .env.local && next dev",
+    "prod": "cp .env.production .env.local && next dev",
     "turbo": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
+    "build:dev": "cp .env.development .env.local && next build",
+    "build:stage": "cp .env.staging .env.local && next build",
+    "build:prod": "cp .env.production .env.local && next build",
+    "start:dev": "cp .env.development .env.local && next start",
+    "start:stage": "cp .env.staging .env.local && next start",
+    "start:prod": "cp .env.production .env.local && next start",
     "lint": "next lint"
   },
   "dependencies": {
